@@ -1,0 +1,305 @@
+@import url('fonts.css');
+@import url('flex.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-user-select:none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-text-size-adjust:none;
+}
+
+html {
+	overflow: hidden;
+}
+
+a {
+	cursor: default;
+}
+
+body {
+	font: 11px/14px 'GothamProRegular', sans-serif;
+	color: #000000;
+}
+
+#wrapper {
+	position: fixed;
+	top: 0;
+	right:0;
+	bottom: 0;
+	left: 0;
+}
+
+#topLeft {
+	padding-top: 13px;
+	padding-left: 20px;
+	z-index: 1;
+	position: relative;
+	cursor: default;
+}
+
+#topLeft .logo {
+	font: 14px/20px 'GothamProBold', sans-serif;
+	letter-spacing: -0.3px;
+}
+#topLeft .logo span {
+	display: inline-block;
+	color: #ffffff;
+	padding: 7px 5px 4px 3px;
+	margin-right: 3px;
+	background: #000000;
+	border-radius: 2px;
+}
+
+#topLeft .info {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-size: 0;
+}
+
+#topLeft .info__item {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	line-height: 20px;
+	margin-left: 20px;
+}
+
+#topLeft .info__item img {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+
+#slides li {
+	display: inline-block;
+	background-size: contain;
+	position: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	top: 70px;
+	right: 0;
+	bottom: 124px;
+	left: 0;
+
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+}
+
+#slides li:active {
+	cursor: grabbing;
+	cursor: -moz-grabbing;
+	cursor: -webkit-grabbing;
+}
+
+#slides li.intro .caption { display: none; }
+#slides li.pipe { background-image: url(../i/slide-pipe.jpg); }
+#slides li.particula { background-image: url(../i/slide-pipe.jpg); }
+#slides li.scrapp { background-image: url(../i/slide-scrapp.jpg); }
+#slides li.healbe { background-image: url(../i/slide-pipe.jpg); }
+#slides li.fitclub { background-image: url(../i/slide-pipe.jpg); }
+#slides li.castweek { background-image: url(../i/slide-pipe.jpg); }
+#slides li.supremecourt { background-image: url(../i/slide-pipe.jpg); }
+#slides li.particula-is { background-image: url(../i/slide-pipe.jpg); }
+#slides li.transsistemotekhnika { background-image: url(../i/slide-pipe.jpg); }
+
+
+#slides p { margin-bottom: 14px; }
+#slides a { color: #000000; text-decoration: none; cursor: pointer; }
+
+#slides p { margin-bottom: 14px; }
+
+.caption {
+	position: absolute;
+	top: 0;
+	max-width: 170px;
+
+	/*pointer-events: none;*/
+	padding-left: 20px;
+	padding-top: 34px;
+	visibility: hidden; /*Made visible in JS once layout has been calculated*/
+}
+
+.caption__plus {
+	display: block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	font-size: 0;
+	margin-bottom: 8px;
+	background: #2a2e2e;
+	border-radius: 50%;
+
+	cursor: pointer;
+}
+.caption__plus:before,
+.caption__plus:after {
+	content: ' ';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #0594d5;
+}
+
+.caption__plus:before {
+	width: 18px;
+	height: 2px;
+	margin: -1px 0 0 -9px;
+}
+
+.caption__plus:after {
+	width: 2px;
+	height: 18px;
+	margin: -9px 0 0 -1px;
+}
+
+.text {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	height: 100%;
+	overflow: auto;
+}
+
+.text__in {
+	width: 76%;
+	max-width: 765px;
+	margin: 0 auto;
+	font: 26px/61px 'GothamProBold', sans-serif;
+	letter-spacing: -0.6px;
+	text-align: center;
+}
+
+.text__big {
+	font-size: 48px;
+	letter-spacing: -1px;
+}
+
+.text a { color: #000000; text-decoration: none; }
+.text a:hover { text-decoration: underline; }
+
+.text p { margin-bottom: 8px; }
+
+
+.fade {
+	position: fixed;
+	bottom: 0px;
+	height: 58px;
+	width: 150px;
+	pointer-events:none;
+}
+
+#rightFade {
+	right: 0;
+	background-image: -moz-linear-gradient( 180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+	background-image: -webkit-linear-gradient( 180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+	background-image: -ms-linear-gradient( 180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+}
+
+#leftFade {
+	left: 0;
+	background-image: -moz-linear-gradient( 0deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+	background-image: -webkit-linear-gradient( 0deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+	background-image: -ms-linear-gradient( 0deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0) 100%);
+}
+
+#nav {
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	white-space: nowrap;
+	background: #ffffff;
+}
+
+#nav li {
+	display: inline-block;
+	font-size: 20px;
+	line-height: 20px;
+	letter-spacing: -0.4px;
+	padding: 0 13px;
+	cursor: default;
+}
+
+#nav div {
+	position: relative;
+	padding: 30px 10px 56px 10px;
+}
+
+#nav span {
+	position: absolute;
+	top: 11px;
+	left: 10px;
+	font-family: 'GothamProRegular';
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #7f7f7f;
+}
+
+#nav ._active div {
+	font-family: 'GothamProBold';
+	background: #f5ff4c;
+}
+
+#nav ._active span { color: #000000; }
+
+/*iPhone*/
+@media only screen and (max-device-width: 628px) {
+	body { font-size: 9px; line-height: 12px; }
+
+	#nav li { padding: 0 3px; }
+	#nav div { padding-bottom: 35px; }
+
+	.fade {
+		width: 40px;
+	}
+
+	#slides li {
+		top: 60px; right: 90px; bottom: 100px; left: 10px;
+	}
+
+	.caption {
+		padding-left: 8px;
+		padding-top: 0;
+		opacity: 1 !important;
+	}
+
+	.text { right: -80px; top: 0; }
+
+	.text__in { font-size: 18px; line-height: 25px; }
+
+	.text__big { font-size: 24px; line-height: 35px; }
+
+	#topLeft { padding-left: 10px; }
+	#topLeft .info { right: 10px; }
+	#topLeft .info__item { margin-left: 10px; font-size: 10px; }
+
+}
+
+/*Landscape iPhone*/
+@media only screen and (max-device-width: 628px) and (orientation : landscape) {
+	.fade {
+		width: 70px;
+	}
+}
+
+/*iPhone and iPad*/
+@media (max-device-width : 1024px) {
+	body {
+		overflow: hidden;
+	}
+}
+
+/*iPad*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	#slides li {
+		right: 150px; left: 10px;
+	}
+
+	.text { right: -140px; }
+}
