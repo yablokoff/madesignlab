@@ -97,8 +97,8 @@ body {
 }
 
 #slides li.intro .caption { display: none; }
-#slides li.pipe { background-image: url(../i/slide-pipe.jpg); }
-#slides li.particula { background-image: url(../i/slide-pipe.jpg); }
+#slides li.pipe { background-image: url(../i/pipe.png); }
+#slides li.particula { background-image: url(../i/particula.jpg); }
 #slides li.scrapp { background-image: url(../i/slide-scrapp.jpg); }
 #slides li.healbe { background-image: url(../i/slide-pipe.jpg); }
 #slides li.fitclub { background-image: url(../i/slide-pipe.jpg); }

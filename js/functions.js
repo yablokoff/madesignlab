@@ -9,15 +9,15 @@ var endValue = 0;
 var viewportWidth = 0;
 var viewportHeight = 0;
 var nav;
-var imageWidths = [2040,2040,2040,868,2040,2040,2040,2040,2040,2040];
-var imageHeights = [1186,1186,1186,501,1186,1186,1186,1186,1186,1186];
+var imageWidths = [2040,461,1500,868,2040,2040,2040,2040,2040,2040];
+var imageHeights = [1186,895,2294,501,1186,1186,1186,1186,1186,1186];
 
 // Distance between the center of the image and its optical right edge in the coordinate system of the native image resolution
-var captionRightEdges = [816,816,816,356,816,816,816,816,816,816]; //от физической середины картинки до правого края видимого изображения (монитор)
+var captionRightEdges = [0,231,750,356,816,816,816,816,816,816]; //от физической середины картинки до правого края видимого изображения (монитор)
 
 //var captionBottomEdges = [0,580,545,390,642,580,580,545,545];
 
-var captionTopEdges = [579,579,579,250,579,579,579,579,579,579]; //от физической середины картинки до верхнего края видимого изображения (монитор)
+var captionTopEdges = [0,448,1147,250,579,579,579,579,579,579]; //от физической середины картинки до верхнего края видимого изображения (монитор)
 
 // Padding added to the bottom in the coordinate system of the slide divs
 var applyBottomPaddingToCaption = [false,false,true,false,false,false,false,true,true];
