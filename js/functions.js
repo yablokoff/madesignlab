@@ -9,18 +9,18 @@ var endValue = 0;
 var viewportWidth = 0;
 var viewportHeight = 0;
 var nav;
-var imageWidths = [2040,461,1500,868,434,600,2040];
-var imageHeights = [1186,895,2294,501,883,600,1186];
+var imageWidths = [2040,461,1500,868,434,600];
+var imageHeights = [1186,895,2294,501,883,600];
 
 // Distance between the center of the image and its optical right edge in the coordinate system of the native image resolution
-var captionRightEdges = [0,231,750,356,217,300,816]; //от физической середины картинки до правого края видимого изображения (монитор)
+var captionRightEdges = [0,231,750,356,217,200]; //от физической середины картинки до правого края видимого изображения (монитор)
 
 //var captionBottomEdges = [0,580,545,390,642,580,580,545,545];
 
-var captionTopEdges = [0,402,1147,250,395,300,579]; //от физической середины картинки до верхнего края видимого изображения (монитор)
+var captionTopEdges = [0,402,1147,250,395,230]; //от физической середины картинки до верхнего края видимого изображения (монитор)
 
 // Padding added to the bottom in the coordinate system of the slide divs
-var applyBottomPaddingToCaption = [false,false,true,false,false,false];
+var applyBottomPaddingToCaption = [false,false,true,false,false];
 
 var springSystem = new rebound.SpringSystem();
 var mainSpring = springSystem.createSpring();
@@ -121,6 +121,10 @@ $(document).ready(function($) {
 	$(".logo").click(function(){
 		selectTabIndex(0, true);
 	})
+
+	var currentTime = Date.now();
+	var currentMoment = moment.tz(currentTime, "America/Los_Angeles").format("LT");
+	$(".time").text(currentMoment);
 
 });
 
