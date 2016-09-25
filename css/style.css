@@ -65,7 +65,7 @@ body {
 
 #topLeft .info {
 	position: absolute;
-	top: 20px;
+	top: 19px;
 	right: 30px;
 	font-size: 0;
 }
@@ -121,6 +121,7 @@ body {
 
 #slides p { margin-bottom: 14px; }
 #slides a { color: #000000; text-decoration: none; cursor: pointer; }
+#slides a:hover { opacity: 70%;}
 
 #slides p { margin-bottom: 14px; }
 
@@ -150,7 +151,7 @@ body {
 .caption .particula { background-image: url(../i/particula-logo.png); }
 .caption .scrapp { background-image: url(../i/scrapp-logo.png); }
 .caption .healbe { background-image: url(../i/healbe-logo.png); }
-.caption .fitclub { background-image: url(../i/fitclub-logo.png); }
+.caption .fitclub { background-image: url(../i/fitclub-logo.png); height: 27px; }
 
 .text {
 	position: absolute;
@@ -171,7 +172,7 @@ body {
 }
 
 .text__in span{
-	font: 26px/61px 'GothamPro', sans-serif;
+	font-family: 'GothamPro', sans-serif;
 }
 
 .text__big {
@@ -304,4 +305,9 @@ body {
 	}
 
 	.text { right: -140px; }
+}
+
+
+@media only screen and (max-device-width : 414px) {
+	.text__in { margin: 100px auto; }
 }
