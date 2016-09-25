@@ -18,25 +18,6 @@ a {
 	cursor: default;
 }
 
-.caption a {
-
-}
-
-.caption a[target="_blank"]:after {
-	vertical-align: middle;
-	display: inline-block;
-	content: "";
-	width: 6px;
-	height: 6px;
-	background-image: url("../i/arrow.png");
-	background-size: 6px 6px;
-	background-repeat: no-repeat;
-	background-position: center;
-	position: relative;
-  top: 0px;
-  left: 4px;
-}
-
 body {
 	font: 11px/14px 'GothamProRegular', sans-serif;
 	color: #000000;
@@ -139,10 +120,45 @@ body {
 
 
 #slides p { margin-bottom: 14px; }
-#slides a { color: #000000; text-decoration: none; cursor: pointer; }
-#slides a:hover { opacity: 70%;}
+#slides a { 
+	color: #000000; 
+	text-decoration: none; 
+	cursor: pointer; 
+}
+#slides a[target="_blank"]:hover {
+	opacity: 0.5;
+	text-decoration: underline;
+}
+
+#slides a[target="_blank"]:hover:after {
+	opacity: 0.5;
+}
+
+#slides a[target="_blank"]:after {
+	vertical-align: middle;
+	display: inline-block;
+	content: "";
+	width: 6px;
+	height: 6px;
+	background-image: url("../i/arrow.png");
+	background-size: 6px 6px;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+  top: 0px;
+  left: 4px;
+}
 
 #slides p { margin-bottom: 14px; }
+
+#wrapper .mail-link {
+	text-decoration: none !important;
+}
+
+#wrapper .mail-link:hover {
+	opacity: 0.5;
+	text-decoration: underline !important;
+}
 
 .caption {
 	position: absolute;
