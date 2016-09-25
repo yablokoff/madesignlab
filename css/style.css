@@ -18,6 +18,25 @@ a {
 	cursor: default;
 }
 
+.caption a {
+
+}
+
+.caption a[target="_blank"]:after {
+	vertical-align: middle;
+	display: inline-block;
+	content: "";
+	width: 6px;
+	height: 6px;
+	background-image: url("../i/arrow.png");
+	background-size: 6px 6px;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+  top: 0px;
+  left: 4px;
+}
+
 body {
 	font: 11px/14px 'GothamProRegular', sans-serif;
 	color: #000000;
